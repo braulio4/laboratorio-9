@@ -97,12 +97,13 @@ int main(){
 
 template <class TIPO1,class TIPO2>
 void ordenAscendente(TIPO1 *ptarreglo,TIPO2 primero,TIPO2 ultimo){
+	TIPO1 aux;
 	for(int i=0;i<numeros;i++){
 		for(int j=0;j<numeros-1;j++){
 			if(*(ptarreglo+j)>*(ptarreglo+j+1)){
-				primero=*(ptarreglo+j);
+				aux=*(ptarreglo+j);
 				*(ptarreglo+j)=*(ptarreglo+j+1);
-				*(ptarreglo+j+1)=primero;
+				*(ptarreglo+j+1)=aux;
 			}
 		}
 	}
@@ -110,12 +111,13 @@ void ordenAscendente(TIPO1 *ptarreglo,TIPO2 primero,TIPO2 ultimo){
 
 template <class TIPO1,class TIPO2>
 void ordenDescendente(TIPO1 *ptarreglo2,TIPO2 primero,TIPO2 ultimo){
+	TIPO1 aux;
 	for(int i=0;i<numeros;i++){
 		for(int j=0;j<numeros-1;j++){
 			if(*(ptarreglo2+j)<*(ptarreglo2+j+1)){
-				primero=*(ptarreglo2+j);
+				aux=*(ptarreglo2+j);
 				*(ptarreglo2+j)=*(ptarreglo2+j+1);
-				*(ptarreglo2+j+1)=primero;
+				*(ptarreglo2+j+1)=aux;
 			}
 		}
 	}
